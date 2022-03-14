@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | New Unity Project (1)</title>
+    <title>Unity WebGL Player | Point And Click</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1920 height=1080></canvas>
+      <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -22,20 +22,20 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">New Unity Project (1)</div>
+        <div id="unity-build-title">Point And Click</div>
       </div>
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/ED.loader.js";
+      var loaderUrl = buildUrl + "/2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/ED.data.gz",
-        frameworkUrl: buildUrl + "/ED.framework.js.gz",
-        codeUrl: buildUrl + "/ED.wasm.gz",
+        dataUrl: buildUrl + "/2.data",
+        frameworkUrl: buildUrl + "/2.framework.js",
+        codeUrl: buildUrl + "/2.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "New Unity Project (1)",
-        productVersion: "0.1",
+        productName: "Point And Click",
+        productVersion: "1.0",
       };
 
       var container = document.querySelector("#unity-container");
@@ -62,8 +62,8 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "1920px";
-        canvas.style.height = "1080px";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
 
